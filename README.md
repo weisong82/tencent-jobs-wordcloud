@@ -6,3 +6,4 @@
 2.用jieba分词做一些分词、停用词过滤
 3.用WordCloud直观展示词云 
 
+ ![image](https://github.com/weisong82/tencent-jobs-wordcloud/blob/master/wc.png)
