@@ -13,7 +13,9 @@
 3.用WordCloud直观展示词云 
 
  ![image](https://github.com/weisong82/tencent-jobs-wordcloud/blob/master/wc.png)
-
+ 2018.5.19更新
+ ![image](jobs-hotwords2018.5.19.png)
 ## keywords_extra.py
 4. 直接使用jieba，在Textrank算法下提取的关键词列表，输出到textrank-${date}
- ![image](obs-hotwords2018.5.19.png)
+ 
+ 
