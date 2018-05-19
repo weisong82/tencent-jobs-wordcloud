@@ -18,7 +18,7 @@ lines=open('/tmp/tencentjob.csv').readlines()
 #分词
 jieba.analyse.set_stop_words(stoppath)
 #停用词list，去除时候用
-stoplist = {}.fromkeys([ line.strip() for line in open(stoppath) ])
+stoplist = {}.fromkeys([ line.strip('\n') for line in open(stoppath) ])
 
 ##分词文件输出
 with open(seg_file, 'w') as f:
