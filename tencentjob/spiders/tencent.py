@@ -6,12 +6,12 @@ from tencentjob.items import TencentjobItem
 class TencentSpider(scrapy.Spider):
     name = 'tencent'
     allowed_domains = ['hr.tencent.com']
-    start_urls = ['https://hr.tencent.com/position.php/']
+    start_urls = ['https://careers.tencent.com/search.html']
 
     def parse(self, response):
 
         # get <a> 列表页
-        lists = response.xpath("//table//a")
+        lists = response.xpath("/html/body/div/div[4]/div[3]/div[2]/div[2]/div")
         for link in lists:
             url = link.xpath("@href").extract()[0]
             if 'position_detail' in url: # 根据url去解析内容页面
