@@ -1,3 +1,7 @@
+# 网页抓包， curl格式导出。 贴到postman做好测试， 然后使用code-python-requests格式导出代码。
+
+#see page:  https://careers.tencent.com/search.html?index=1    目前有258页.page10的情况下
+
 # 导入requests库
 import requests
 # 导入文件操作库

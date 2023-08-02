@@ -7,6 +7,10 @@ import jieba.analyse
 from wordcloud import WordCloud, STOPWORDS
 import  datetime
 
+###define var 
+jobs_file = 'jobs-2023.8.2.csv'
+##########
+
 now = datetime.datetime.now()
 str_time=now.strftime('%Y-%m-%d')
 
@@ -16,8 +20,7 @@ stoppath= path.join(d, 'stop.txt') #停用词文件路径
 seg_file= path.join(d,'output','tencentjob_seg_words.txt') #分词文件
 outfile = path.join(d,'output','jobs-hotwords'+str_time+'.png') #result
 
-
-lines=open('jobs-2019.7.25.csv', encoding='utf-8').readlines()
+lines=open(jobs_file, encoding='utf-8').readlines()
 #分词
 jieba.analyse.set_stop_words(stoppath)
 #停用词list，去除时候用
@@ -44,7 +47,7 @@ stopwords = set(STOPWORDS)
 #可以加一些过滤词
 
 #中文字体要单独弄
-wc = WordCloud(font_path='/usr/share/fonts//simhei.ttf',
+wc = WordCloud(font_path='simhei.ttf',
                width=700, height=500,
                background_color="black", max_words=100,min_font_size=10,max_font_size=40,stopwords=stopwords)
 # generate word cloud
